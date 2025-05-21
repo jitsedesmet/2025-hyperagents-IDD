@@ -3,7 +3,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<get-owner> a idd:read-interface ;
+<transfer-events> a idd:read-interface ;
             idd:interaction idd:websocket-turtle ;
             idd:http-resource <https://example.org/transfer-events> ;
             idd:mapping """
