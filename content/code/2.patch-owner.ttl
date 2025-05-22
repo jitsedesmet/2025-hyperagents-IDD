@@ -3,7 +3,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<patch-owners> a idd:write-interface ;
+<patch-owner> a idd:write-interface ;
                idd:interaction idd:http-patch-turtle ;
                idd:http-resource "https://example.org/owners/{uuid}"^^ex:uri-template ;
                idd:rdf-shape <owner-patch-shape> ;

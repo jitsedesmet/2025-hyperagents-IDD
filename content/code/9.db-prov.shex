@@ -1,0 +1,12 @@
+# ONS = <owner-new-shape>
+# PNS = <pet-new-shape>
+# OPS = <owner-patch-shape>
+# CO = <change-owner>
+# ?pet = eval(eval()_1, ONS(ex:name))_2 | eval(CO-{new-id}, CO-{pet-id})_7
+
+eval()_1 a ex:owner .
+eval()_1 ex:name ( ONS(ex:name) | OPS(ex:name) ).
+eval()_1 ex:hasPet ?pet * .
+?pet a ex:pet .
+?pet ex:name ( PNS(ex:name) | D(recursion) ).
+?pet ex:age ( PNS(ex:age) | D(recursion) ).
