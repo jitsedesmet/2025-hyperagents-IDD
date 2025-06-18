@@ -3,7 +3,7 @@ prefix ex: <http://example.org/>
 <owner-shape> {
   a  [ex:owner];
   ex:name xsd:string;
-  ex:pet @<pet-shape>+;
+  ex:pet @<pet-shape>*;
 }
 
 <pet-shape> {
