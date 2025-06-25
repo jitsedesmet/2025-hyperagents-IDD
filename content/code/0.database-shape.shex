@@ -5,7 +5,6 @@ prefix ex: <http://example.org/>
   ex:name xsd:string;
   ex:pet @<pet-shape>*;
 }
-
 <pet-shape> {
   a [ex:pet] ;
   ex:name xsd:string ;
