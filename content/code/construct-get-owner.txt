@@ -1,11 +1,10 @@
 CONSTRUCT {
-    ?owner-iri a ex:owner ;
+    ?id a ex:owner ;
         ?p ?o ;
     ?o ?p1 ?o1 ;
 } WHERE {
-    BIND( IRI(CONCAT(ex:owners, '/', ?owner-uuid)) AS ?owner-iri ) .
     <database> {
-        ?owner-iri a ex:owner ;
+        ?id a ex:owner ;
             ?p ?o ;
         OPTIONAL { ?o ?p1 ?o1 . }
     }
