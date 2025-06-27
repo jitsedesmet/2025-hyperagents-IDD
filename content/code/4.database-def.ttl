@@ -35,5 +35,5 @@ CONSTRUCT {
 } WHERE {
     [] a ex:triple-patch ;
        idd:insert <<( ?insert-s ?insert-p ?insert-o )>> ;
-         idd:delete <<( ?delete-s ?delete-p ?delete-o )>> ;
+       idd:delete <<( ?delete-s ?delete-p ?delete-o )>> .
 }"""^^idd:sparql-1-2 .
