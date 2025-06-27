@@ -1,0 +1,4 @@
+prefix ex: <http://example.org/>
+<change-owner-shape> {
+  ex:new-owner IRI
+}

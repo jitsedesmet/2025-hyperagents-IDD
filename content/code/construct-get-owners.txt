@@ -1,0 +1,6 @@
+CONSTRUCT { [] ex:item ?owner . }
+WHERE {
+    <database> {
+        ?owner a ex:owner .
+    }
+}
