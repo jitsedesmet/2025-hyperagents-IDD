@@ -6,18 +6,37 @@
   }
 }
 
+@font-face {
+  font-family: 'Libertinus Sans';
+  src: url('../fonts/LibertinusSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libertinus Sans';
+  src: url('../fonts/LibertinusSerif-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libertinus Sans';
+  src: url('../fonts/LibertinusSans-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
 .printfont1 {
-  font-family: "Libertinus", sans-serif;
+  font-family: "Libertinus Sans", sans-serif;
 }
 .printfont2 {
-  font-family: "Libertinus", sans-serif;
+  font-family: "Libertinus Sans", sans-serif;
   font-weight: bold;
 }
 .printfont3 {
-  font-family: "Libertinus", sans-serif;
+  font-family: "Libertinus Sans", sans-serif;
 }
 .printfont4 {
-  font-family: "Libertinus", sans-serif;
+  font-family: "Libertinus Sans", sans-serif;
   font-weight: bold;
 }
 
