@@ -14,6 +14,12 @@
 }
 @font-face {
   font-family: 'Libertinus Sans';
+  src: url('../fonts/LibertinusSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libertinus Serif';
   src: url('../fonts/LibertinusSerif-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
@@ -29,14 +35,14 @@
   font-family: "Libertinus Sans", sans-serif;
 }
 .printfont2 {
-  font-family: "Libertinus Sans", sans-serif;
+  font-family: "Libertinus Serif", serif;
   font-weight: bold;
 }
 .printfont3 {
   font-family: "Libertinus Sans", sans-serif;
 }
 .printfont4 {
-  font-family: "Libertinus Sans", sans-serif;
+  font-family: "Libertinus Serif", serif;
   font-weight: bold;
 }
 
