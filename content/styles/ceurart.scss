@@ -12,7 +12,9 @@ ACM SIG template styles http://www.acm.org/sigs/publications/sigguide-v2.2sp
 
 @media print {
 @page {
-margin:3cm 3cm 5.5cm 3cm;
+  size: A4;
+  // Top, right, bottom, left
+  margin: 0.87in 0.98in 0.83in 1.06in;
 }
 
 #repeating-title {
@@ -20,7 +22,7 @@ margin:3cm 3cm 5.5cm 3cm;
 }
 
 body {
-font-size:12pt !important;
+font-size: 11pt !important;
 padding:0 !important;
 margin:0 auto !important;
 width:18cm !important;
@@ -32,11 +34,11 @@ overflow:hidden;
 page-break-after:avoid;
 margin-bottom:8pt;
 }
-h2 { font-size:16pt !important; }
-h3 { font-size:15pt !important; }
-h4 { font-size:14pt !important; }
-h5 { font-size:12pt !important; }
-h6 { font-size:12pt !important; }
+h2 { font-size:14pt !important; }
+h3 { font-size:12pt !important; }
+h4 { font-size:11pt !important; }
+h5 { font-size:11pt !important; }
+h6 { font-size:11pt !important; }
 h1 sup { font-size:9pt !important; }
 
 body > nav,
@@ -44,13 +46,14 @@ body > header nav,
 body > footer nav { display:none; }
 
 #abstract {
-padding:0 0 0 4em;
-margin:0 0 2em 0;
-line-height: 1.1em;
+  padding:0 0 0 0.79in;
+  margin:0 0 0.21in 0;
+  font-size: 9pt;
+  line-height: 1.1em;
 }
 #abstract h2 {
-margin-bottom: 0;
-font-size: 14pt !important;
+  margin-bottom: 0;
+  font-size: 11pt !important;
 }
 
 a, abbr {
@@ -62,7 +65,7 @@ iframe { display:none !important; }
 
 #references ol {
 font-family:"Libertinus", serif;
-font-size:12pt;
+font-size:11pt;
 }
 
 .author-name {
@@ -128,8 +131,14 @@ line-height:1.3;
 }
 
 main {
-  section p {
-  text-indent:1em;
+  p {
+    text-indent: 0.2in;
+  }
+  h2 + p {
+    text-indent: 0;
+  }
+  h3 + p {
+    text-indent: 0;
   }
 }
 
@@ -143,9 +152,9 @@ hyphens:none;
 #keywords, #ccsconcepts {
   display: block;
   margin-bottom: 0.5em;
-  text-transform:capitalize;
+  text-transform: capitalize;
   .title {
-    text-transform: uppercase;
+    text-transform: capitalize;
     display: block;
     font-weight: bold;
     font-size: 1em;
@@ -163,8 +172,8 @@ hyphens:none;
 .firstpagefootertop {
   line-height: 0.1em;
   display: block;
-  width: 48%;
-  border-top: 1px solid black;
+  width: 25%;
+  border-top: 0.05pt solid black;
 }
 
 .footnotecopyright {
@@ -213,7 +222,7 @@ margin-left:1em;
 h1 {
 margin:0.75em auto 0.25em auto;
 font-family: 'Libertinus', sans-serif;
-font-size:1.8em;
+font-size: 17pt;
 text-align: left;
 }
 aside article h1 { text-align:left; }
@@ -247,8 +256,8 @@ h4 {
 font-size:1.2226em;
 }
 h2, dt {
-font-weight:bold;
-text-transform:capitalize;
+  font-weight:bold;
+  text-transform:capitalize;
 }
 h3 {
 text-transform:capitalize;
@@ -265,7 +274,8 @@ font-size:1.5em;
 text-align:center;
 }
 h2 {
-margin-top:1.5em;
+  margin-top: 0.17in;
+  margin-bottom: 0.13in;
 }
 #content section:first-child h2 {
 margin-top:0;
@@ -513,7 +523,7 @@ list-style-type:none;
 
 #authors, #affiliations {
 text-align:left;
-margin:0 0 0.25em 0;
+ margin: 0.19in 0;
 line-height:1;
 }
 #authors ul,
@@ -532,11 +542,16 @@ list-style-type:none;
 display:inline-block;
 vertical-align:top;
 }
-#authors li:not(:last-child):after {
+#authors li:not(:last-child,:nth-last-child(2)):after {
   content: ',';
 }
-#authors .first-name {
-  color: gray;
+#authors li:nth-last-child(2):after {
+  content: '  and';
+}
+
+#author-name .first-name {
+  color: #7f7f7f !important;
+  -webkit-print-color-adjust: exact;
 }
 
 #author-name {
@@ -545,6 +560,10 @@ font-size:1.333em;
 
 #author-org {
 font-size:1.0835em;
+}
+
+#affiliations li {
+  font-size:0.90em;
 }
 
 #author-email {
