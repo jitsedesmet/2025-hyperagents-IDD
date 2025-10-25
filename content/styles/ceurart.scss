@@ -285,6 +285,20 @@ h3, h4, h5, h6 {
   margin-top:1em;
 }
 
+a.shown {
+  color: #2f4e4f;
+}
+
+.myRow {
+  display: flex;
+  align-content: center;
+  margin: 0.15em 0;
+}
+.myRow span {
+  margin-left: 0.2em;
+}
+
+
 main section:not([id=abstract]):not([id=document-status]):not([id=keywords]):not([id=references]):not([id=categories-and-subject-descriptors]):not([id=general-terms]):not([id=appendix]):not([id=contact-us]) {
 counter-increment:section;
 counter-reset:sub-section;
