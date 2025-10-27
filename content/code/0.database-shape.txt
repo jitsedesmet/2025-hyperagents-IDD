@@ -4,10 +4,10 @@ ASK {
   ?owner a ex:owner ;
          ex:name ?ownerName ;
          ex:pet ?pet ;
-  FILTER( datatype(?ownerName) = xsd:string ) .
+  FILTER(datatype(?ownerName) = xsd:string) .
   ?pet a ex:pet ;
        ex:name ?petName ;
        ex:age ?petAge .
-  FILTER( datatype(?petName) = xsd:string &&
-    datatype(?petAge) = xsd:positiveInteger ) .
+  FILTER(datatype(?petName) = xsd:string &&
+      datatype(?petAge) = xsd:positiveInteger) .
 }

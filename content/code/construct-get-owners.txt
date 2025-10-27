@@ -1,6 +1,5 @@
-CONSTRUCT { [] ex:item ?owner . }
-WHERE {
-    <database> {
-        ?owner a ex:owner .
-    }
+CONSTRUCT { [] ex:item ?owner . } WHERE {
+  GRAPH <database> {
+    ?owner a ex:owner .
+  }
 }

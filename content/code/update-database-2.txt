@@ -1,25 +1,33 @@
-PREFIX ex: <https://example.org/>
 DELETE {
+  GRAPH <database> {
     ?origOwner ex:pet ?orig-pet .
     ?origPet a ex:pet ;
-        ex:age ?age ;
-        ex:name ?name .
+             ex:age ?age ;
+             ex:name ?name .
+  }
 } INSERT {
+  GRAPH <database> {
     ?newOwner ex:pet ?movedIri .
     ?movedIri a ex:pet ;
-        ex:age ?age
-        ex:name ?name
+              ex:age ?age
+              ex:name ?name
+  }
 } WHERE {
-    BIND( URI( CONCAT(ex:owners, '/', ?id) ) AS ?origOwner ) .
-    BIND( URI( CONCAT(?origOwner, '/', ?petId) ) AS ?origPet ) .
-    ?o ex:new-owner ?newOwner .
-    BIND( URI( CONCAT(?newOwner, '/', ?petId) ) AS ?movedIri ) .
-    # Go look in the current state of the database for whether the owner and pet exist.
-    GRAPH <database> {
-        ?origOwner ex:pet ?origPet .
-        ?origPet a ex:pet ;
-            ex:age ?age ;
-            ex:name ?name .
-        ?newOwner a ex:owner ;
-    }
+  # From received data:
+  ?o ex:new-owner ?newOwner .
+  BIND(URI( CONCAT(ex:owners, '/', ?id) )
+      AS ?origOwner) .
+  BIND(URI( CONCAT(?origOwner, '/', ?petId) )
+      AS ?origPet) .
+  BIND(URI( CONCAT(?newOwner, '/', ?petId) )
+      AS ?movedIri) .
+  # Go look in the current state of the database
+  #     for whether the owner and pet exist.
+  GRAPH <database> {
+    ?origOwner ex:pet ?origPet .
+    ?origPet a ex:pet ;
+             ex:age ?age ;
+             ex:name ?name .
+    ?newOwner a ex:owner ;
+  }
 }

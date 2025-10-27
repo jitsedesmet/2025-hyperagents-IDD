@@ -1,11 +1,11 @@
 CONSTRUCT {
-    ?id a ex:owner ;
-        ?p ?o ;
-    ?o ?p1 ?o1 ;
+  ?id a ex:owner ;
+      ?ownerP ?ownerO ;
+  ?ownerO ?petP ?petO ;
 } WHERE {
-    <database> {
-        ?id a ex:owner ;
-            ?p ?o ;
-        OPTIONAL { ?o ?p1 ?o1 . }
-    }
+  GRAPH <database> {
+    ?id a ex:owner ;
+        ?ownerP ?ownerO ;
+    OPTIONAL { ?ownerO ?petP ?petO . }
+  }
 }
