@@ -69,3 +69,13 @@
 h2.noBefore:before {
   content: '' !important;
 }
+
+sup.mySup, sub.mySup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub.mySup {
+  top: 0.4em;
+}
+
