@@ -990,6 +990,11 @@ section article p:last-child {
 margin-bottom:0;
 }
 
+dl.references {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .references {
   //font-size: 1.05em;
   line-height: 1.1em;

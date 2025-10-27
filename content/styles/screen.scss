@@ -15,7 +15,7 @@
 }
 
 .printonly {
-  display: none;
+  display: none !important;
 }
 
 img.plot {
@@ -156,9 +156,9 @@ main, #appendix {
   h4 {
     font-weight: bold;
     margin: 0 1em 0 0;
-    
+
     counter-increment: subsubsection;
-    
+
     &::before {
       content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
     }
@@ -383,7 +383,7 @@ table {
   thead {
     border-bottom: 1px solid;
   }
-  
+
   .hr {
     display: block;
     width: 100%;
